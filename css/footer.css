@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+/* footer ----------------------------------------------------*/
+
+.footer {
+  scroll-snap-align: end;
+  background-color: #eeeeee;
+}
+
+.footer__box {
+  width: 1200px;
+  margin: 5px auto 0 auto;
+  padding-bottom: 80px;
+  font-size: 15px;
+  color: #666;
+}
+
+.footer__list {
+  float: left;
+  display: flex;
+}
+
+.footer__list li {
+  margin-top: 15px;
+}
+
+.footer__list a {
+  padding: 10px 15px;
+  line-height: 2.2;
+  display: block;
+  color: #666;
+}
+
+.footer__list li:nth-child(2) a {
+  color: #000;
+}
+
+.footer__span {
+  float: right;
+  display: flex;
+  margin-top: 15px;
+}
+
+.footer__span a {
+  line-height: 2.2;
+  margin: 5px;
+  padding: 5px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #666;
+}
+
+.footer__span a:nth-child(1) {
+  color: #000;
+}
+
+.footer__arrow {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/arrow.png);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 5px 7px;
+}
+
+.footer__info {
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.footer__logo {
+  clear: both;
+  float: left;
+  width: 15%;
+  height: 50px;
+  background-image: url(../img/molit_logo.svg);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.footer__address {
+  float: left;
+  width: 30%;
+  padding-left: 5%;
+  line-height: 1.6;
+  text-align: left;
+  letter-spacing: -1px;
+}
+
+.footer__call {
+  width: 50%;
+  float: right;
+  text-align: right;
+  line-height: 1.6;
+}
+
+.footer__call strong {
+  color: #2d78de;
+  font-weight: bold;
+}
+
+.footer__copyright {
+  clear: both;
+  margin-left: 20%;
+  position: relative;
+  top: -22px;
+}
+
+.w3c_valid {
+  float: right;
+  margin-left: 10px;
+}

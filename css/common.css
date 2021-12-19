@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* 공통클래스 스타일 */
+
+* {
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.indent {
+  text-indent: -9999px;
+  display: inline-block;
+}

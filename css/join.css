@@ -1,0 +1,248 @@
+@charset "utf-8";
+
+.join__box {
+  width: 1200px;
+  margin: 85px auto 0;
+  overflow: hidden;
+}
+
+
+
+
+
+
+.join__head {
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+.join__head>h2 {
+  float: left;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.join__head>h2>span {
+  font-size: 16px;
+  font-weight: normal;
+  padding: 10px;
+  margin-left: 10px;
+  color: white;
+  background-color: #1f446a;
+}
+
+.join__head>span {
+  float: right;
+  margin-top: 15px;
+  font-size: 14px;
+  letter-spacing: -1px;
+  color: #666;
+}
+
+.join__nav {
+  float: left;
+  width: 25%;
+}
+
+.join__nav--list {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.join__nav--list li {
+  border-top: 1px solid #999;
+}
+
+.join__nav--list li:last-child {
+  border-bottom: 1px solid #666;
+}
+
+.join__nav--list li a {
+  display: block;
+  width: 100%;
+  padding: 25px 0;
+  text-align: center;
+  font-size: 20px;
+  color: #999;
+  letter-spacing: -1px;
+}
+
+.join__nav--list li a span {
+  font-size: 13px;
+  margin: 0 10px;
+  box-sizing: border-box;
+}
+
+.join__nav--list li:nth-child(3) a {
+  padding: 50px 0 50px 60px;
+  box-sizing: border-box;
+  background-color: #48c6f7;
+  color: black;
+  border-top: none;
+  font-weight: bold;
+  background-image: url(../img/mmstep_icn_03.png);
+  background-repeat: no-repeat;
+  background-position: 20% 50%;
+}
+
+.join__nav--list li:nth-child(3) span {
+  display: block;
+  margin-bottom: 10px;
+  color: #0079a5;
+}
+
+.join__main {
+  float: right;
+  width: 75%;
+}
+
+.join__info {
+  width: 100%;
+}
+
+.join__info fieldset {
+  width: 100%;
+}
+
+.join__info--accept {
+  width: 100%;
+  height: 100px;
+  margin: 0px auto 50px;
+  background-color: #f8fafd;
+  font-size: 18px;
+  line-height: 100px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border: 2px solid #0079a5;
+}
+
+.join__info--accept input {
+  margin-right: 10px;
+}
+
+.join__info--accept strong {
+  color: red;
+  margin-left: 5px;
+}
+
+.join__info--terms {
+  width: 100%;
+  background-color: #f8fafd;
+  box-sizing: border-box;
+  padding: 30px;
+  margin: 50px auto;
+  border: 2px solid #0079a5;
+}
+
+.join__info--terms label {
+  font-size: 18px;
+}
+
+.join__info--terms label strong {
+  color: red;
+  margin-left: 10px;
+}
+
+
+.join__info--terms textarea {
+  display: block;
+  width: 80%;
+  height: 300px;
+  margin: 30px auto;
+
+}
+
+
+.join__main p {
+  color: #0079a5;
+  font-size: 15px;
+  letter-spacing: -1px;
+}
+
+.join__main p span {
+  display: block;
+  margin: 6px 0;
+  color: black;
+}
+
+.join__form h3 {
+  font-size: 19px;
+  margin: 20px 0 10px 0;
+}
+
+.join__form h3 strong {
+  color: red;
+}
+
+.join__fieldset {
+  padding: 30px 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  overflow: hidden;
+}
+
+
+.join__fieldset legend {
+  display: none;
+}
+
+.join__fieldset--list {
+  display: block;
+  margin: 15px 0;
+  width: 100%;
+  height: 50px;
+}
+
+.join__fieldset label {
+  display: inline-block;
+  width: 20%;
+  font-size: 16px;
+  text-align: left;
+}
+
+.join__fieldset label::before {
+  content: "*";
+  color: red;
+  margin-right: 5px;
+}
+
+
+.join__fieldset input {
+  height: 25px;
+  width: 30%;
+  vertical-align: middle;
+}
+
+.join__fieldset--list:nth-of-type(6) input {
+  width: 5%;
+}
+
+.join__fieldset--list:nth-of-type(8) input {
+  width: 10%;
+}
+
+
+.join__fieldset--double {
+  padding: 5px 15px;
+  vertical-align: middle;
+}
+
+.join__fieldset--add {
+  float: right;
+  width: 80%;
+  margin-top: 5px;
+  height: 20px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: -1px;
+}
+
+.join__fieldset--question {
+  height: 28px;
+  vertical-align: middle;
+}
+
+.join__fieldset--refresh {
+  padding: 5px 15px;
+  vertical-align: middle;
+}
