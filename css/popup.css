@@ -17,7 +17,7 @@
   background-color: white;
   transform: translate(-50%, -50%);
   z-index: 3;
-  width: 320px;
+  width: 400px;
   padding: 25px;
 }
 
@@ -68,7 +68,7 @@ time {
 
 .popup__main--right {
   position: absolute;
-  right: -50%;
+  right: -20%;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -85,15 +85,5 @@ time {
   padding-bottom: 40px;
   background-image: url(../img/btn_xl.png);
   background-repeat: no-repeat;
-  background-position: 50% 10%;
-  color: white;
-  border-bottom: 1px solid white;
-}
-
-.popup__main--right p {
-  display: inline-block;
-  width: 100%;
-  padding: 40px 0;
-  text-align: center;
   color: white;
 }

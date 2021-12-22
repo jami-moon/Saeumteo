@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 * {
   scroll-snap-type: y proximity;
 }
@@ -9,7 +8,7 @@
   scroll-snap-align: start;
   height: 100vh;
   width: 100%;
-  position: relative
+  position: relative;
 }
 
 /* 메인영역------------------------------------------------------- */
@@ -46,7 +45,7 @@ section {
   text-align: center;
 }
 
-.apply__box h2+p {
+.apply__box h2 + p {
   text-align: center;
   font-size: 35px;
   margin-bottom: 38px;
@@ -126,7 +125,26 @@ section {
   display: inline-block;
   width: calc(95% / 6);
   height: 200px;
-  background-color: hsla(0, 0%, 100%, .8);
+  background-color: hsla(0, 0%, 100%, 0.8);
+}
+
+.apply__list li:hover {
+  animation: hover-ani 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes hover-ani {
+  0% {
+    border: 1px solid transparent;
+    background-color: hsla(0, 0%, 100%, 0);
+    -webkit-box-shadow: 0 0 0 0 transparent;
+    box-shadow: 0 0 0 0 transparent;
+  }
+  to {
+    border: 1px solid #06c;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35);
+  }
 }
 
 .apply__list li::before {
@@ -212,7 +230,7 @@ section {
 }
 
 .apply__list li:nth-child(5) a:nth-child(3) {
-  background-color: #39b54a
+  background-color: #39b54a;
 }
 
 .apply__list li:nth-child(5) a:nth-child(2):hover {
@@ -223,7 +241,6 @@ section {
   background-color: #176d23;
 }
 
-
 .apply__list li:nth-child(6) a {
   display: block;
   margin-top: 20px;
@@ -232,7 +249,6 @@ section {
   font-weight: bold;
   color: #8492a5;
 }
-
 
 .apply__call {
   font-size: 15px;
@@ -287,7 +303,7 @@ section {
   width: 100%;
   margin: 0 auto;
   padding-top: 130px;
-  position: relative
+  position: relative;
 }
 
 .issue__header h2 {
@@ -789,7 +805,6 @@ section {
   background-color: black;
   color: white;
   font-size: 14px;
-
 }
 
 .service__notice,
@@ -864,7 +879,6 @@ section {
   font-weight: bold;
 }
 
-
 .service__error--list mark {
   font-size: 14px;
   color: white;
@@ -883,7 +897,7 @@ section {
 
 .service__etc {
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 
 .service__etc--fieldset {
