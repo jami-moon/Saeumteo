@@ -1,11 +1,9 @@
 @charset "utf-8";
 
 * {
-  scroll-snap-type: y proximity;
 }
 
 .section {
-  scroll-snap-align: start;
   height: 100vh;
   width: 100%;
   position: relative;
@@ -913,11 +911,13 @@ section {
 }
 
 .service__etc--fieldset input {
-  display: inline;
+  position: relative;
+  display: block;
   width: 400px;
   height: 45px;
   border: 2px solid #4c4c4c;
   padding-left: 10px;
+  margin-right: 20px;
 }
 
 .service__etc--fieldset input::placeholder {
@@ -925,21 +925,6 @@ section {
   margin-left: 20px;
   font-size: 16px;
   color: #4c4c4c;
-}
-
-.service__etc--fieldset button {
-  position: relative;
-  margin-left: -47px;
-  margin-right: 25px;
-  height: 45px;
-  width: 45px;
-  background-color: #fff;
-  border: 0;
-  background-image: url(../img/main04_icn_search.png);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  text-indent: -9999px;
-  cursor: pointer;
 }
 
 .service__etc--list {

@@ -8,7 +8,6 @@
   z-index: 1;
   background-color: white;
   border-bottom: 1px solid lightgray;
-  scroll-snap-align: start;
 }
 
 .header__box {
