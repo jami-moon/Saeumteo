@@ -9,12 +9,15 @@ $(document).ready(function () {
     $(".popup").fadeOut();
   });
 
-  $(".header__go--apply").mouseenter(function () {
-    $(".menu__apply").slideDown();
+  // 헤더 gnb 마우스오버
+  $(".header__gnb-item").mouseenter(function () {
+    const targetIdx = $(this).index();
+    $(".lnb__item").hide();
+    $(".lnb__item").eq(targetIdx).show();
   });
 
   $(".header").mouseleave(function () {
-    $(".menu__apply").slideUp();
+    $(".lnb__item").hide();
   });
 
   // 퀵 메뉴 열기

@@ -1,9 +1,14 @@
 @charset "utf-8";
-/* 공통클래스 스타일 */
 
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
 }
 
 button {
