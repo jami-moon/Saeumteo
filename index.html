@@ -17,19 +17,25 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
     />
-    <!-- fullPage.css 링크 -->
-    <link rel="stylesheet" href="./css/jquery.fullPage.css" />
+    <!-- Slick CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <!-- CSS 링크 -->
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/popup.css" />
     <!-- JQUERY 링크 -->
     <script src="./js/jquery-3.6.0.min.js" defer></script>
-    <!-- FullPage.js 링크 -->
-    <script src="./js/jquery.fullPage.js" defer></script>
+    <!-- Slick JS 링크 -->
+    <script
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      defer
+    ></script>
     <!-- JS 링크 -->
     <script src="./js/main.js" defer></script>
   </head>
@@ -413,41 +419,64 @@
       <div id="collusion" class="section collusion">
         <div class="collusion__box">
           <div class="collusion__slides">
-            <div class="collusion__slide--1">
-              <h2>
-                협의기관 민원검토를 위한<br />
-                <strong
-                  >사이버 통합협의<br />
-                  시스템</strong
-                >
-              </h2>
-              <p>
-                사이버 통합협의 시스템에서는 온라인 실시간<br />협의 검토 및
-                처리가 가능합니다
-              </p>
-              <a href="#none">바로가기</a>
+            <div
+              class="collusion__slide collusion__slide--1"
+              data-dot-content="사이버통합협의시스템"
+            >
+              <div class="slide-content">
+                <h2>
+                  협의기관 민원검토를 위한<br />
+                  <strong
+                    >사이버 통합협의<br />
+                    시스템</strong
+                  >
+                </h2>
+                <p>
+                  사이버 통합협의 시스템에서는 온라인 실시간<br />협의 검토 및
+                  처리가 가능합니다
+                </p>
+                <a class="slide-content__go" href="#none">바로가기</a>
+              </div>
             </div>
-            <!-- <div class="collusion__slide2">
-            <h2>대한민국 설계공모가 다 모였다!<br><strong>공공컨축 설계공모<br> 정보서비스<br>시스템</strong></h2>
-            <p>사이버 통합협의 시스템에서는 온라인 실시간<br>협의 검토 및 처리가 가능합니다</p>
-            <a href="#none">바로가기</a>
+            <div
+              class="collusion__slide collusion__slide--2"
+              data-dot-content="공공컨축 설계공모 정보서비스"
+            >
+              <div class="slide-content">
+                <h2>
+                  대한민국 설계공모가 다 모였다!<br /><strong
+                    >공공건축 설계공모<br />
+                    정보서비스</strong
+                  >
+                </h2>
+                <p>
+                  전국 모든 공공건축 설계공모의 시행 공고와<br />
+                  심사결과를 조회하실 수 있습니다.
+                </p>
+                <a class="slide-content__go" href="#none">바로가기</a>
+              </div>
+            </div>
+            <div
+              class="collusion__slide collusion__slide--3"
+              data-dot-content="클라우드 세움터"
+            >
+              <div class="slide-content">
+                <h2>
+                  새로워진 건축행정<br /><strong
+                    ><em>클라우드 세움터를</em><br />소개합니다.</strong
+                  >
+                </h2>
+                <p>
+                  클라우드 시스템으로 새로워진 건축행정시스템에서<br />효율적인
+                  업무를 시작해 보세요.
+                </p>
+                <a class="slide-content__go" href="#none">바로가기</a>
+              </div>
+            </div>
           </div>
-          <div class="collusion__slide3">
-            <h2>새로워진 건축행정<br><strong>클라우드 세움터를<br>소개합니다</strong></h2>
-            <p>사이버 통합협의 시스템에서는 온라인 실시간<br>협의 검토 및 처리가 가능합니다</p>
-            <a href="#none">바로가기</a> -->
-          </div>
-          <div class="collusion__control">
-            <a href="#none" class="collusion__control--pre">이전</a>
-            <a href="#none" class="collusion__control--next">다음</a>
-          </div>
-          <ul class="collusion__list">
-            <li><a href="#none">사이버통합협의시스템</a></li>
-            <li><a href="#none">공공컨축 설계공모 정보서비스</a></li>
-            <li><a href="#none">클라우드 세움터</a></li>
-          </ul>
+          <div class="slide-arrow"></div>
+          <div class="scroll"></div>
         </div>
-        <div class="scroll"></div>
       </div>
       <!-- service -->
       <div id="service" class="section service">
@@ -474,14 +503,15 @@
                 <li><a href="#none">2</a></li>
                 <li><a href="#none">3</a></li>
               </ul>
-              <div class="service__slide--1">
-                <h3>건축통계서비스</h3>
-                <p>
-                  다양한 분석을 통한<br />인허가 및 건축물 정보의<br />활용성
-                  제고
-                </p>
-                <a href="#none" class="service__slide--go">바로가기</a>
-              </div>
+              <a class="service__item service__item--1 on" href="#none">
+                <img src="./img/service_1.jpg" alt="service 1번 이미지" />
+              </a>
+              <a class="service__item service__item--2" href="#none">
+                <img src="./img/service_2.jpg" alt="service 2번 이미지" />
+              </a>
+              <a class="service__item service__item--3" href="#none">
+                <img src="./img/service_3.jpg" alt="service 3번 이미지" />
+              </a>
             </div>
             <div class="service__notice">
               <h3>공지사항</h3>
@@ -532,11 +562,20 @@
           <div class="service__etc">
             <fieldset class="service__etc--fieldset">
               <legend class="hide">FAQ</legend>
-              <label>자주묻는질문</label>
-              <input
-                type="text"
-                placeholder="작성한 민원이 마이페이지에서 안보여요"
-              />
+              <label for="service-qna">자주묻는질문</label>
+              <div class="service__input-group">
+                <input
+                  id="service-qna"
+                  type="text"
+                  placeholder="작성한 민원이 마이페이지에서 안보여요"
+                />
+                <button class="qna-btn" type="button">
+                  <img
+                    src="./img/main04_icn_search.png"
+                    alt="검색 버튼 아이콘"
+                  />
+                </button>
+              </div>
             </fieldset>
             <ul class="service__etc--list">
               <li>
@@ -552,7 +591,6 @@
             </ul>
           </div>
         </div>
-        <div class="scroll"></div>
       </div>
     </main>
     <!-- 하단영역-->

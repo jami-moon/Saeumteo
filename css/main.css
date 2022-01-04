@@ -74,6 +74,7 @@ section {
   padding-left: 20px;
   font-size: 20px;
   border: none;
+  outline: 0;
 }
 
 .apply__input::placeholder {
@@ -548,74 +549,101 @@ section {
 /* 협의.공모외---------------------------------------- */
 
 .collusion {
-  background-color: #2d78de;
   position: relative;
   height: 100vh;
   width: 100%;
 }
 
 .collusion__box {
-  max-width: 1200px;
   width: 100%;
-  margin: 0 auto;
-  padding-top: 200px;
+  height: 100%;
+  padding-top: 85px;
   position: relative;
 }
 
-.collusion__slide--1 {
-  width: 100%;
-  height: 100%;
-  padding: 80px 120px;
-  display: inline-block;
-  line-height: 1.2;
-  letter-spacing: -1px;
-  background-image: url(../img/main03_vis_cybersys.jpg);
-  background-repeat: no-repeat;
-  background-position: 95% 50%;
-  background-size: contain;
-  box-sizing: border-box;
+.collusion__slide .slide-content {
+  max-width: 50%;
+  margin: 0 auto;
+  padding-top: 200px;
 }
 
-.collusion__slide--1 h2 {
-  font-size: 25px;
-  font-weight: 900;
-  color: white;
-}
-
-.collusion__slide--1 strong {
-  font-size: 50px;
-  color: #c4edff;
-}
-
-.collusion__slide--1 p {
-  margin-top: 30px;
-  font-size: 15px;
-  color: white;
-}
-
-.collusion__slide--1 a {
+.collusion__slide .slide-content__go {
   display: inline-block;
   font-size: 18px;
   color: white;
   border: 1px solid white;
   padding: 10px 20px;
   margin-top: 60px;
+  transition: all 0.3s;
 }
 
-.collusion__slide--1 a:hover {
+.collusion__slide .slide-content__go:hover {
   background-color: black;
   border: 1px solid transparent;
 }
 
-.collusion__control {
+.collusion__slide {
   width: 100%;
+  height: calc(100vh - 170px);
+  background-repeat: no-repeat;
+}
+
+.collusion__slide .slide-content h2 {
+  font-size: 25px;
+  color: white;
+  margin-bottom: 50px;
+  line-height: 1.2;
+}
+
+.collusion__slide .slide-content strong {
+  font-size: 50px;
+  font-weight: 900;
+  color: #c4edff;
+}
+
+.collusion__slide .slide-content p {
+  color: white;
+  line-height: 1.2;
+}
+
+.collusion__slide--1 {
+  background-color: #2d78de;
+  background-image: url(../img/main03_vis_cybersys.jpg);
+  background-position: 70% 40%;
+  background-size: 35%;
+}
+
+.collusion__slide--2 {
+  background-color: #5861da;
+  background-image: url(../img/main03_vis_exh.jpg);
+  background-position: 72% 35%;
+  background-size: 35%;
+}
+
+.collusion__slide--3 {
+  background-color: #b53999;
+  background-image: url(../img/main03_vis_cloud.jpg);
+  background-position: 70% 35%;
+  background-size: 35%;
+}
+
+.collusion__slide--3 .slide-content strong {
+  color: white;
+}
+
+.collusion__slide--3 .slide-content em {
+  color: #ffde00;
+}
+
+.slide-arrow {
+  width: 60%;
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.collusion__control--pre {
+.slide-arrow--pre {
   text-indent: -9999px;
   width: 20px;
   height: 20px;
@@ -626,7 +654,7 @@ section {
   border-right: transparent;
 }
 
-.collusion__control--next {
+.slide-arrow--next {
   text-indent: -9999px;
   width: 20px;
   height: 20px;
@@ -637,28 +665,33 @@ section {
   border-left: tan;
 }
 
-.collusion__list {
+.slide-controller {
+  position: absolute;
+  top: 80%;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: baseline;
 }
 
-.collusion__list li {
-  margin: 40px 20px;
-  padding-top: 20px;
-  border-top: 3px solid white;
+.slide-controller button {
   width: 220px;
+  margin: 30px;
+  padding-top: 20px;
   text-align: center;
-}
-
-.collusion__list li a {
+  border-top: 3px solid white;
   font-size: 15px;
   color: white;
+  transition: all 0.3s;
 }
 
-.collusion__list li a:hover {
-  color: #00ffff;
+.slide-controller li.slick-active button {
+  color: #0ff;
+  border-color: #0ff;
+}
+
+.slide-controller button:hover {
+  color: #0ff;
+  border-color: #0ff;
 }
 
 /* 유용한 서비스-------------------------------------- */
@@ -752,11 +785,13 @@ section {
   width: 30%;
   height: 300px;
   margin: 20px;
-  background-color: #ed717c;
   position: relative;
 }
 
 .service__slide--number {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
 }
 
@@ -767,6 +802,7 @@ section {
   background-color: white;
   text-align: center;
   font-size: 12px;
+  transition: all 0.3s;
 }
 
 .service__slide--number a:hover {
@@ -774,32 +810,15 @@ section {
   color: white;
 }
 
-.service__slide--1 h3 {
-  text-align: right;
-  color: white;
-  font-size: 35px;
-  font-weight: bold;
-  margin: 20px 30px;
+.service__item {
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: none;
 }
 
-.service__slide--1 p {
-  text-align: right;
-  color: white;
-  font-size: 20px;
-  margin: 5px 30px;
-  line-height: 1.2;
-}
-
-.service__slide--go {
-  display: inline-block;
-  padding: 5px 20px;
-  border-radius: 20px;
-  position: absolute;
-  bottom: 15%;
-  right: 8%;
-  background-color: black;
-  color: white;
-  font-size: 14px;
+.service__item.on {
+  display: block;
 }
 
 .service__notice,
@@ -855,6 +874,7 @@ section {
 }
 
 .service__notice--list a {
+  margin-bottom: 10px;
   font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -896,6 +916,7 @@ section {
 }
 
 .service__etc--fieldset {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -903,11 +924,10 @@ section {
 
 .service__etc--fieldset label {
   margin-right: 20px;
-  vertical-align: baseline;
   font-size: 18px;
 }
 
-.service__etc--fieldset input {
+.service__input-group {
   position: relative;
   display: block;
   width: 400px;
@@ -917,11 +937,26 @@ section {
   margin-right: 20px;
 }
 
-.service__etc--fieldset input::placeholder {
+.service__input-group input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+}
+
+.service__input-group input::placeholder {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 16px;
   font-size: 16px;
   color: #4c4c4c;
+}
+
+.service__etc--fieldset button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding-right: 10px;
 }
 
 .service__etc--list {

@@ -191,7 +191,7 @@
   z-index: 4;
   background-color: white;
   display: flex;
-  border-top: 1px solid #999;
+  border-top: 1px solid rgb(231, 231, 231);
   display: none;
 }
 
@@ -293,9 +293,10 @@
 
 #aside {
   position: fixed;
-  right: 2%;
   top: 25%;
+  right: 3%;
   z-index: 2;
+  width: 150px;
 }
 
 .aside__list li {
@@ -303,44 +304,20 @@
   margin-bottom: 10px;
 }
 
-/* .aside__list li::before{
+.aside__list li::before {
   content: "●";
   position: absolute;
-  left: -18%;
-  top: 23%;
-  font-size: 15px;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 5px;
   color: #666;
-} */
-
-.aside__list li::before {
-  position: absolute;
-  left: -30%;
-  top: calc((100% - 10px) / 2);
-  transform: translateY(-25%);
-  vertical-align: middle;
-  font-size: 15px;
-  color: #666;
-}
-
-.aside__list li:nth-child(1)::before {
-  content: "- 01";
-}
-
-.aside__list li:nth-child(2)::before {
-  content: "- 02";
-}
-
-.aside__list li:nth-child(3)::before {
-  content: "- 03";
-}
-
-.aside__list li:nth-child(4)::before {
-  content: "- 04";
 }
 
 .aside__list a {
-  display: block;
-  padding: 10px 15px 10px 10px;
+  display: inline-block;
+  margin-left: 30px;
+  padding: 10px;
   border-radius: 20px;
   color: #666;
   font-size: 15px;
@@ -354,12 +331,13 @@
 .aside__add {
   position: absolute;
   top: 100%;
-  right: 5%;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
 }
 
 .aside__add li {
   display: block;
-  width: 150px;
   padding: 20px 15px 20px 65px;
   background-repeat: no-repeat;
   background-position: 7% 50%;
